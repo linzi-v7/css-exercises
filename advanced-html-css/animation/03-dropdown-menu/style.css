@@ -21,6 +21,11 @@
   display: none;
 }
 
+.dropdown-menu.visible {
+  animation: bounce 0.5s ease-in-out;
+  transform-origin: top;
+}
+
 ul.dropdown-menu li:hover {
   background: rgb(47, 46, 46);
 }
@@ -29,4 +34,17 @@ ul.dropdown-menu li:hover {
   display: block;
 }
 
-
+@keyframes bounce {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scaleY(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
